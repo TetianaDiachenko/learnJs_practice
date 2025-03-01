@@ -18,3 +18,19 @@ function camelize(str) {
 console.log(camelize("background-color")); // backgroundColor
 console.log(camelize("list-style-image")); // listStyleImage
 console.log(camelize("-webkit-transition")); // WebkitTransition
+
+/* Task 2: Write a function filterRange(arr, a, b) 
+that takes an array arr, searches it for 
+elements greater than or equal to a and 
+less than or equal to b, and 
+returns an array of these elements.*/
+
+let arr = [5, 3, 8, 1];
+
+function filterRange(arr, a, b) {
+	return arr.filter(item => item >= a && item <= b);
+}
+let filtered = filterRange(arr, 1, 4);
+
+console.log(filtered); // [ 3, 1 ]
+console.log(arr); // [ 5, 3, 8, 1 ]

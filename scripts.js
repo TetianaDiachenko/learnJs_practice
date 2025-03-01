@@ -34,3 +34,14 @@ let filtered = filterRange(arr, 1, 4);
 
 console.log(filtered); // [ 3, 1 ]
 console.log(arr); // [ 5, 3, 8, 1 ]
+
+// Task 3: Sort descending
+
+let arrSort = [5, 2, 1, -10, 8];
+
+function sortDescenging(arr) {
+	return arr.sort((a,b) => b - a);
+	// return [...arr].sort((a, b) => b - a); 
+	// if we want to creat a new arr and don't change our arrSort
+} 
+console.log(sortDescenging(arrSort)); // [ 8, 5, 2, 1, -10 ]

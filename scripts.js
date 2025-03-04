@@ -45,3 +45,19 @@ function sortDescenging(arr) {
 	// if we want to creat a new arr and don't change our arrSort
 } 
 console.log(sortDescenging(arrSort)); // [ 8, 5, 2, 1, -10 ]
+
+/* Task 4: Write a function filterRangeInPlace(arr, a, b) that uses the array arr 
+and removes from it all values ​​at most those that are between a and b. 
+That is, the check has the form a ≤ arr[i] ≤ b. */
+
+let arr3 = [5, 3, 8, 1];
+
+function filterRangeInPlace(arr, a, b) {
+	for(let i = arr.length - 1; i >= 0; i--) { // Iterate through an array from the end
+		if (arr[i] < a || arr[i] > b) {
+			arr.splice(i, 1); // Remove an element if it doesn't fit
+		}
+	}
+}  
+filterRangeInPlace(arr, 1, 4); // [ 3, 1 ]
+console.log(arr);
